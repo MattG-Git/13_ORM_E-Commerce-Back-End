@@ -47,24 +47,6 @@ router.post('/', async (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
-    try {
-      const productData = await Product.create({
-        where: {
-          product_name: req.body.product_name,
-          price: req.body.price,
-          stock: req.body.stock,
-          tagIds: req.body.tag_id
-        }
-      });
-    
-      if (!productData) {
-        res.status(404).json({ message: 'Could not create new product'});
-        return;
-      }
-      res.status(200).json(productData);
-    } catch (err) {
-      res.status(400).json(err);
-    }
 
   Product.create(req.body)
     .then((product) => {
@@ -132,6 +114,22 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbProductData => {
+    if (!dbProductData) {
+      res.status(404).json({message: 'No product found with this id'});
+      return;
+    }
+    res.json(dbProductData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 });
 
 module.exports = router;
