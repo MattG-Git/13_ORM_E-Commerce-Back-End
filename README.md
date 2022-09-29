@@ -48,4 +48,13 @@ To use this application, first log into MySQL and source the database using SOUR
 
 
 # Video Demo
-[ORM E_Commerce_BackEnd Testing.webm.zip](https://github.com/MattG-Git/13_ORM_E-Commerce-Back-End/files/9670430/ORM.E_Commerce_BackEnd.Testing.webm.zip)
+
+PRODUCT TESTING: 
+[ORM BackEnd E_Commerce Testing Products.webm](https://user-images.githubusercontent.com/70189946/192928136-eed81642-b969-4019-aece-080104538a14.webm)
+
+CATEGORY TESTING: 
+[ORM BackEnd E_commerce Testing Categories.webm](https://user-images.githubusercontent.com/70189946/192928318-91d99acf-09c9-408e-aef3-6ebcf41fecad.webm)
+
+TAG TESTING: 
+[ORM BackEnd E_Commerce Testing Tags.webm](https://user-images.githubusercontent.com/70189946/192928530-bda053ae-d24c-4843-9f9f-48891a0e6c17.webm)
+
